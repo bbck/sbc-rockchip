@@ -1,6 +1,7 @@
 go 1.24.0
 
 use (
+	./installers/cm3588-nas/src
 	./installers/helios64/src
 	./installers/nanopi-r5s/src
 	./installers/nanopi-r4s/src
