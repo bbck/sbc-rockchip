@@ -13,6 +13,7 @@ dependencies:
   - stage: rock4se
   - stage: turingrk1
   - stage: profiles
+  - stage: friendlyelec-cm3588-nas
   - stage: u-boot-helios64
     platform: linux/arm64
   - stage: u-boot-nanopi-r5s
@@ -32,6 +33,8 @@ dependencies:
   - stage: u-boot-rock4se
     platform: linux/arm64
   - stage: u-boot-turingrk1
+    platform: linux/arm64
+  - stage: u-boot-friendlyelec-cm3588-nas
     platform: linux/arm64
   - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
     platform: linux/arm64
@@ -73,6 +76,10 @@ dependencies:
     platform: linux/arm64
     from: /dtb/rockchip/rk3588-turing-rk1.dtb
     to: /rootfs/artifacts/arm64/dtb/rockchip/rk3588-turing-rk1.dtb
+  - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
+    platform: linux/arm64
+    from: /dtb/rockchip/rk3588-friendlyelec-cm3588-nas.dtb
+    to: /rootfs/artifacts/arm64/dtb/rockchip/rk3588-friendlyelec-cm3588-nas.dtb
 finalize:
   - from: /rootfs
     to: /

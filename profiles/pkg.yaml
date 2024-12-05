@@ -21,3 +21,5 @@ finalize:
     to: /rootfs/profiles
   - from: /pkg/turingrk1
     to: /rootfs/profiles
+  - from: /pkg/friendlyelec-cm3588-nas
+    to: /rootfs/profiles
